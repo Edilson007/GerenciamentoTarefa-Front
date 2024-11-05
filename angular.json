@@ -1,9 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "5cf393e8-3c39-4d60-8fbb-0034faa30cd3"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "BioShow-Front": {
+    "Gerenciamento-Tarefas-Front": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/BioShow-Front",
+            "outputPath": "dist/Gerenciamento-Tarefas-Front",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -31,6 +34,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -72,10 +76,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "BioShow-Front:build:production"
+              "browserTarget": "Gerenciamento-Tarefas-Front:build:production"
             },
             "development": {
-              "browserTarget": "BioShow-Front:build:development"
+              "browserTarget": "Gerenciamento-Tarefas-Front:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +87,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "BioShow-Front:build"
+            "browserTarget": "Gerenciamento-Tarefas-Front:build"
           }
         },
         "test": {
@@ -107,5 +111,5 @@
       }
     }
   },
-  "defaultProject": "BioShow-Front"
+  "defaultProject": "Gerenciamento-Tarefas-Front"
 }
